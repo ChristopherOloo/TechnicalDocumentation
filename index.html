@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Git Technical Documentation</title>
+  <link  rel = "stylesheet" type = "text/css" href = "index.css">
+
+</head>
+<body>
+  <nav id="navbar">
+    <header>
+      Git and Github Technical Documentation
+    </header>
+    
+    <ul>
+      <a class="nav-link" href="#Introduction_to_Git_and_Github" rel="internal"><li>Introduction to Git and Github</li></a>
+      
+      <a class="nav-link" href="#Installation_and_Configuring_Git" rel="internal"><li>Installation and Configuring Git</li></a>
+     <a class="nav-link" href="#Git_and_Github_Basics" rel="internal"><li>Git and Github Basics</li></a>
+      <a class="nav-link" href="#Advancing_in_Git_and_Github" rel="internal"><li>Advancing in Git and Github</li></a>
+     <a class="nav-link" href="#Reference_and_Resources" rel="internal"><li>Reference and Resources</li> </a>
+      
+    </ul>
+  </nav>
+  
+  <main id="main-doc">
+    <section class="main-section" id="Introduction_to_Git_and_Github">
+      <header>Introduction to Git and Github</header>
+      <article>
+        <p>Git is a VCS — Version Control System. What that really means is, Git helps us manage our project files. One of the primary things that git does and also the primary reason it exists is to keep track of the entire history of things that you are working on.</p>
+       
+        <p>This is especially helpful for software developers because when you are working on a project you first build a basic version of it and then try to improve it by adding new features (or) just experiment with things. This whole process of experimenting with new features is incredibly error prone and you might wanna revert back to your original code.</p>
+        
+      <p>This is where Version Control comes into play, it automatically tracks every minute change in your project and allows us to revert back to a previous version no matter how many times you changed your files.</p>
+        
+       <p>Another awesome thing that Git allows to do is, it allows people to work together on the same project at the same time without disturbing each other’s files. Collaboration is all the more easier with Git.Team members can work on different features and easily merge changes.</p>
+        
+      <p>Git is easy to learn and has a lightning fast performance. It outclasses other Version Control Systems like SubVersion with features like cheap and local branching, convenient staging areas and multiple workflows.</p>
+        
+      <p>GitHub is a web-based service for version control using Git. Basically, it is a social networking site for developers. You can look at other people’s code, identify issues with their code and even propose changes. This also helps you in improving your code. On a lighter note, it is a great place to show off your projects and get noticed by potential recruiters.
+        </p>
+   <p>In short, Git is Version Control System and GitHub is a hosting service for Git Repositories. They have te following advantages:
+        <li>Storing of developer's work</li>
+        <li>Tracking changes made during software development</li>
+        <li>Helps a developer to collaborate better with other developers</li>
+        <li>A nice platform for learning to code</li>
+        </p>
+      </article>
+      
+    </section>
+    
+    <section class="main-section" id="Installation_and_Configuring_Git">
+      <header>Installation and Configuring Git</header>
+      <h1>Windows</h1>
+      <article>
+       <p>Download and install <u>Git for Windows</u>. Once installed, you’ll be able to use Git from the command prompt or PowerShell.</p>
+        <p>Git for Windows does not automatically update. Update it by downloading the newer version of it.</p>
+      </article>
+      
+      <h1>macOS</h1>
+      <article>
+        <p>Install <u>Homebrew</u>and run the following to install an up to date version of Git on your Mac:
+        <code>
+          > brew install git
+          </code></p>
+        <p>To update your Git install, use Homebrew’s upgrade option:
+        <code>
+          > brew upgrade git
+          </code></p>
+      </article>
+      <h1>Linus</h1>
+      <article>
+        <p>Use your Linux package management system to install Git. on Ubuntu:
+        <code>
+          > sudo apt-get install git
+          </code></p>
+      </article>
+      
+      <h1>Configure Git</h1>
+      <article>
+        <p>
+          Run the following commands from the command prompt after installing Git to configure this information:
+          <code>
+            > git config --global user.name "user name"
+          </code>
+          <code>
+            > git config --global user.email "user email"
+          </code>
+        </p>
+      </article>
+      
+    </section>
+   
+    <section class="main-section" id="Git_and_Github_Basics">
+      <header>Git and Github Basics</header>
+      <article>
+        <p>Use the <i>git init</i> command to create a new repo from an existing folder on your computer. From the command line, navigate to the root folder containing your code and run
+        <code>
+          > git init
+          </code></p>
+        <p>with <i>git add .</i> move changes from the working directory to the staging area.
+        <code>
+          > git add .
+          </code></p>
+        <p><i>git commit</i> Takes the staged files and commits it to the project history. Together with git add, this saves your changes in the main repo.
+        <code>
+          > git commit -m "commit message"
+          </code></p>
+        <p>
+          Use the <i>git clone</i> command to copy the contents of an existing repo to a folder on your computer. From the command line, navigate to the folder you want to contain the cloned repo, then run:
+          <code>
+            > git clone (URL of the repo)
+          </code>
+        </p>
+        <p>create branches using the <i>git branch</i> command:
+        <code>
+          > git branch --branchname--
+          </code></p>
+        <p>
+          Use the <i>git push</i> to save your changes on the server.
+          <code>
+            > git push origin --branchname--
+          </code>
+        </p>
+        <p>To keep the local repository in sync with the remote repository
+        <code>
+          > git pull origin master
+          </code></p>
+      </article>
+    </section>
+    
+    <section class="main-section" id="Advancing_in_Git_and_Github"><header>Advancing in Git and Github</header>
+    <h1>Navigating and Troublushooting Git</h1>
+      <article>
+        <p>For tracking new or deleted files run:
+        <code>
+          $ git status
+          </code></p>
+        <p>To output the entire commit history with SHA-1 hash number run:
+        <code>
+          $ git log
+          </code></p>
+        <p>To switch from one branch to anothe run:
+        <code>
+          $ git checkout
+          </code></p>
+        <p>To see how a particular repo looks in a commit run:
+        <code>
+          $ git checkout --commit--
+          </code></p>
+        
+      </article>
+      <h2>Othe advance commands and tools include:</h2>
+      <article>
+        <p>
+          <code>git remote -v</code>
+          <code>$ git remote rm --remote--</code>
+          <code>$ git branch -v</code>
+          <code>$ git branch -rv</code>
+        </p>
+        <p>
+        <li>Running github in the command line</li>
+        <li>Creating github repo from the command line</li>  
+         <li>Connecting to github with SSH</li>
+        </p>
+      </article>
+    </section>
+    
+   <section class="main-section" id="Reference_and_Resources">
+     <header>Reference and Resources</header>
+     <h1>Using Git</h1>
+     <article>
+       <p>Familiarize yourself with Git by visiting the <i>official Git project site</i> and reading the ProGit ebook. You can review the <i>Git command list</i> or <i>Git command lookup reference</i>while using the <i>Try Git</i> simulator.</p>
+      
+     </article>
+     <h2>Using Github</h2>
+     <article>
+       <p>GitHub Learning Lab offers free interactive courses that are built into GitHub with instant automated feedback and help. Learn to open your first pull request, make your first open source contribution, create a GitHub Pages site, and more. For more information about course offerings, see <i>GitHub Learning Lab.</i></p>
+     </article>
+     <h1>Trainings</h1>
+     <article>
+       <p><u>Free classes:</u>GitHub offers a series of interactive, on-demand training courses including GitHub 101: Introduction, GitHub 102: GitHub Desktop, and GitHub 103: Command Line.</p>
+       <p><u>Web-based educational programs:</u>GitHub offers live trainings with a hands-on, project-based approach for those who love the command line and those who don't.</p>
+       <p><u>Extras:</u>
+         <li>Code schools</li>
+         <li>CS50</li>
+         <li>Bootcamp</li>
+         <li>Freecodecamp</li>
+         <li>And many others</li>
+       </p>
+     </article>
+    </section>
+    </main>
+  
+  
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
